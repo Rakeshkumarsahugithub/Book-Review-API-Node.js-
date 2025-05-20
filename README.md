@@ -97,14 +97,76 @@ A RESTful API built with **Node.js**, **Express**, and **MongoDB** that allows u
 You can use Postman to interact with the API.
 
 ## 🔐 Authentication
- - Signup
+  Signup
 - Method: POST
-- Endpoint: /api/signup
+- Endpoint: http://localhost:5000/api/signup
 - Body (raw, JSON): - {
   "name": "Rakesh Kumar Sahu",
   "email": "rakesh@example.com",
   "password": "securepassword123"
+
 }
+---
+ Login
+- Method: POST
+- Endpoint: /api/login
+- Body (raw, JSON): - {
+  "email": "rakesh@example.com",
+  "password": "securepassword123"
+
+}
+- Response - Jwt token will be generated
+
+  📘 Books
+  Add a Book (Authenticated)
+- Method: POST
+- Endpoint: /api/books
+- Headers: Authorization: Bearer <JWT_TOKEN>
+- Body (raw, JSON): - {
+  "title": "Agni Ki Udaan",
+  "author": "APJ Abudl Kalam",
+  "genre": "Motivation"
+
+}
+---
+Search Books by Title or Author
+- Method: GET
+- Endpoint: /api/books/search?q=  (/api/books/search?q=title/author)
+---
+Get All Books (with Filters)
+- Method: GET
+- Endpoint: /api/books?genre=Fantasy&page=1&limit=5
+---
+Get Book by ID
+- Method: GET
+- Endpoint: /api/books/:id
+---
+
+⭐ Reviews
+Add Review to Book (Authenticated)
+- Method: POST
+- Endpoint: /api/books/:id/reviews
+- Headers: Authorization: Bearer <JWT_TOKEN>
+- Body (raw, JSON): - {
+  "rating": 5,
+  "comment": "Fantastic read!"
+}
+---
+Update Review (Authenticated)
+- Method: PUT
+- Endpoint: /api/reviews/:id
+- Headers: Authorization: Bearer <JWT_TOKEN>
+- Body (raw, JSON): - {
+  "rating": 5,
+  "comment": "Fantastic read (best)."
+
+}
+---
+Delete Review (Authenticated)
+- Method: DELETE
+- Endpoint: /api/reviews/:id
+- Headers: Authorization: Bearer <JWT_TOKEN>
+---
 
 
 
