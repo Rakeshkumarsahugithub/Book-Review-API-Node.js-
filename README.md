@@ -58,7 +58,7 @@ A RESTful API built with **Node.js**, **Express**, and **MongoDB** that allows u
 
 - {
   "name": "Rakesh Kumar Sahu",
-  "email": "rakesh@example.com",
+  "email": "rakesh@gmail.com",
   "password": "securepassword123"
 }
  - Request Body for /api/login: 
