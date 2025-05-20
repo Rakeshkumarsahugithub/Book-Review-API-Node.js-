@@ -117,7 +117,7 @@ You can use Postman to interact with the API.
 }
 - Response - Jwt token will be generated
 
-  📘 Books
+ ## 📘 Books
   Add a Book (Authenticated)
 - Method: POST
 - Endpoint: /api/books
@@ -142,7 +142,7 @@ Get Book by ID
 - Endpoint: /api/books/:id
 ---
 
-⭐ Reviews
+## ⭐ Reviews
 Add Review to Book (Authenticated)
 - Method: POST
 - Endpoint: /api/books/:id/reviews
